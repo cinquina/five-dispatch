@@ -21,26 +21,9 @@ interface VisibilityProviderValue {
 export const VisibilityProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useNuiEvent<boolean>("setVisible", setVisible);
-
-  // Handle pressing escape/backspace
-  useEffect(() => {
-    // Only attach listener when we are visible
-    if (!visible) return;
-
-    const keyHandler = (e: KeyboardEvent) => {
-      if (["Backspace", "Escape"].includes(e.code)) {
-        if (!isEnvBrowser()) fetchNui("hideFrame");
-        else setVisible(!visible);
-      }
-    };
-
-    window.addEventListener("keydown", keyHandler);
-
-    return () => window.removeEventListener("keydown", keyHandler);
-  }, [visible]);
 
   return (
     <VisibilityCtx.Provider

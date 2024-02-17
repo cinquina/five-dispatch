@@ -27,11 +27,11 @@ const Alert: React.FC<AlertProps> = ({ label, code, id, road, priority }) => (
                 <FaGlobeAmericas className="icon" />
                 <p className="text">{road}</p>
             </div>
-            <div className="information">
+            <div className="information" style={{ marginLeft: "auto" }}>
                 <FaHashtag className="icon" />
                 <p className="text">Priority {priority}</p>
             </div>
-            <div className="information">
+            <div className="information" style={{ marginRight: "auto" }} >
                 <FaClock className="icon" />
                 <p className="text">in a few seconds</p>
             </div>

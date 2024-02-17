@@ -1,21 +1,14 @@
 fx_version "cerulean"
-
-description "Basic React (TypeScript) & Lua Game Scripts Boilerplate"
-author "Project Error"
-version '1.0.0'
-repository 'https://github.com/project-error/fivem-react-boilerplate-lua'
-
+author "Five Developments"
 lua54 'yes'
 
-games {
-  "gta5",
-  "rdr3"
-}
+game "gta5"
 
 ui_page 'web/build/index.html'
 
-client_script "client/**/*"
-server_script "server/**/*"
+shared_script "config.lua"
+client_script "client.lua"
+server_script "server.lua"
 
 files {
 	'web/build/index.html',

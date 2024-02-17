@@ -13,14 +13,6 @@
   margin: 20px;
 }
 
-pre {
-  counter-reset: line-numbering;
-  background: #2c3e50;
-  padding: 12px 0px 14px 0;
-  color: #ecf0f1;
-  line-height: 140%;
-}
-
 .alert {
   width: 300px;
   height: 100px;
@@ -90,8 +82,4 @@ pre {
   margin: 5px 0 5px 0;
   font-size: 14px;
   color: #ffffff;
-}
-
-.information:last-child {
-  margin-left: auto;
 }
